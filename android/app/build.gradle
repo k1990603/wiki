@@ -98,7 +98,6 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        multiDexEnabled true
         applicationId "com.rnvscenterprise"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
@@ -107,6 +106,9 @@ android {
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
+        manifestPlaceholders = [
+            NIM_KEY: "708e7d4445de7d60502414f88f768ce9"    //在此修改云信APPID
+        ]
     }
     splits {
         abi {

@@ -9,7 +9,7 @@ import {Navigation} from 'react-native-navigation';
 import {createStackNavigator} from 'react-navigation';
 
 import Login from './Login';
-import Chat from './Chat';
+// import Chat from './Chat';
 import ChatList from './ChatList';
 import FriendList from './FriendList';
 import FriendDetail from './FriendDetail';
@@ -24,6 +24,7 @@ import CreateTeam from './CreateTeam';
 // import SelectUsers from './SelectUsers';
 // import LocationPicker from './LocationPicker';
 // import LocationView from './LocationView';
+
 // export default function () {
 // Navigation.registerComponent ('ImDemo.Login', () => Login);
 // Navigation.registerComponent ('ImDemo.Chat', () => Chat);
@@ -51,14 +52,12 @@ import CreateTeam from './CreateTeam';
 
 export default createStackNavigator (
   {
-    'ImDemo.Login': Login,
-    'ImDemo.ChatList': ChatList,
-    'ImDemo.FriendList': FriendList,
-    'ImDemo.FriendDetail': FriendDetail,
-    'ImDemo.CreateTeam': CreateTeam,
-    'ImDemo.Chat': Chat,
+    Login: Login,
+    ChatList: ChatList,
+    FriendList: FriendList,
+    FriendDetail: FriendDetail,
   },
   {
-    initialRouteName: 'ImDemo.Login',
+    initialRouteName: 'Login',
   }
 );

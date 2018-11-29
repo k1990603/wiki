@@ -25,7 +25,6 @@ import {autorun} from 'mobx';
 export default class RetrievePassword extends Component<{}> {
   constructor (props) {
     super (props);
-
     this._toPhone = this._toPhone.bind (this);
     this._toVCode = this._toVCode.bind (this);
     this.state = {

@@ -28,17 +28,13 @@ export default class Login extends Component {
   }
 
   loginIn () {
-    // const {navigator} = this.props;
-    // alert (NimSession.login ());
-    NimSession.login (
-      this.state.name,
-      md5.createHash (this.state.password)
-    ).then (
+    const {navigator} = this.props;
+    NimSession.login (this.state.name, this.state.password).then (
       () => {
-        global.imaccount = this.state.name;
-        this.props.navigation.navigate ('ImDemo.ChatList');
+        alert (this.state.name);
+        // global.imaccount = this.state.name;
         // navigator.resetTo ({
-        //   stack: 'ImDemo.ChatList',
+        //   screen: 'ImDemo.ChatList',
         //   title: '消息',
         // });
       },

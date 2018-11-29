@@ -17,7 +17,6 @@
     "native-base": "^2.8.1",
     "react": "16.6.1",
     "react-native": "0.57.5",
-    "react-native-amap3d": "^1.0.2",
     "react-native-gesture-handler": "^1.0.9",
     "react-native-image-crop-picker": "^0.21.3",
     "react-native-imui": "^1.0.7",

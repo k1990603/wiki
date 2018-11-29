@@ -7,21 +7,18 @@ import {
 } from 'react-navigation';
 
 import ZhiXinStack from './pages/ZhiXin';
-import OrderScreen from './pages/Order';
+// import OrderScreen from './pages/Order';
 import LoginStack from './pages/Login';
 import EnterpriseScreen from './pages/Enterprise';
 import MeScreen from './pages/Me';
 // import MeStack from './pages/Mes';
 import AuthLoadingScreen from './public/authLoading';
 
-// import registerScreens from './pages/Enterprise';
-
-// registerScreens ();
-
 const TabNavigator = createBottomTabNavigator (
   {
+    Enterprise: EnterpriseScreen,
     ZhiXin: ZhiXinStack,
-    Order: OrderScreen,
+    // Order: OrderScreen,
     Me: MeScreen,
   },
   {
@@ -35,7 +32,6 @@ const TabNavigator = createBottomTabNavigator (
 // 根路由
 const AppNavigator = createSwitchNavigator (
   {
-    Enterprise: EnterpriseScreen,
     // 判断是否登录页面(前置)
     AuthLoading: AuthLoadingScreen,
     // 登录页面
@@ -44,7 +40,7 @@ const AppNavigator = createSwitchNavigator (
     App: TabNavigator,
   },
   {
-    initialRouteName: 'Enterprise',
+    initialRouteName: 'App',
     navigationOptions: {
       headerStyle: {
         backgroundColor: '#1c82d4',
